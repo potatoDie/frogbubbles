@@ -1,0 +1,84 @@
+body {
+	background: #333;
+}
+
+#wrap {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+svg.stage {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	opacity: 0;
+
+	/**
+	 * Use coordinates in math-style: y-axis upwards is positive;
+	 */
+	transform: scaleY(-1); 
+}
+
+
+/* AUDIO MUTE BUTTON */
+.mute-container {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	width: 40px;
+	height: 40px;
+}
+
+.mute-container img {
+	width: 100%;
+	height: 100%;
+}
+
+input#un-mute {
+    display: none;
+}
+
+.unmute {
+    display: none;
+}
+
+input#un-mute:checked ~ .unmute {
+    display: initial;
+}
+
+input#un-mute:checked ~ .mute {
+    display: none;
+}
+
+/**
+ * Styles for SVG elements.
+ */
+
+circle {
+	fill: #b28826;
+	opacity: .9;
+	stroke:none;
+}
+
+.ripple {
+	fill: #315435;
+	opacity: 1;
+}
+.ripple2 {
+	fill: #b28826;
+	opacity: 1;
+}
+
+#bubblyFrame {
+	fill: #315435;
+	stroke: #b28826;
+	stroke-width: .1;
+	transform: scale(1.4, 1.4);
+}
+#bubblyFrame2 {
+	fill: #222;
+	stroke: #000;
+	stroke-width: 0;
+	transform: scale(1, 1);
+}
